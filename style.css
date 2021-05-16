@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --inter-font :  'Inter', sans-serif;
+    --lexend-font: (font-family: 'Inter', sans-serif;);
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    --main-heading-stats: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+
+/* styling the main */
+.main{
+    background-color: var(--main-background);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* styling the card */
+.main .card{
+    width: 75vw;
+    height: 60vh;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    display: flex;
+    overflow: hidden;
+}
+
+/* styling the card image */
+.card .image{
+    min-width: 50%;
+    background: var(--Soft-violet);
+    background-image: url("/images/image-header-desktop.jpg");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* styling the info */
+.card .info{
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 9%;
+}
+
+.info h1{
+    color: var(--main-heading-stats);
+    font-family: var(--inter-font);
+    margin-bottom: 1.5rem;
+}
+.info span{
+    color: var(--Soft-violet);
+}
+
+.info p{
+    color: var(--main-paragraph);
+    font-family: var(--inter-font);
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+/* styling the statistics */
+.info .stat{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    text-transform: uppercase;
+}
+
+.info .stat-box{
+    padding: .5rem;
+}
+
+.info .stat h3{
+    color: var(--main-heading-stats);
+    font-family: var(--inter-font);
+    margin-bottom: .3rem;
+    letter-spacing: .1rem;
+}
+
+/* styling the attribution */
+.attribution { 
+    position: absolute;
+    bottom: 1rem;
+    font-size: 11px; 
+    text-align: center; 
+    color: rgb(160, 160, 160);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* making the design responsive for tablette  */
+@media screen and (max-width: 1000px){
+    .main .card{
+        flex-direction: column-reverse;
+        height: 80vh;
+    }
+
+    .card .image{
+        min-height: 50%;
+    }
+
+    .card .info{
+        min-height: 50%;
+        text-align: center;
+        padding-left: 9%;
+    }
+
+    .info .stat{
+        justify-content: space-evenly;
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 555px){
+    .card .image{
+        min-height: 40%;
+    }
+
+    .card .info{
+        min-height: 60%;
+    }
+}
+
+@media screen and (max-width: 417px){
+    .main .card{
+        width: 85vw;
+        min-height: 80vh;
+    }
+    .card image {
+        min-height: 33%;
+        background-image: url("/images/image-header-mobile.jpg");
+        background-position: top;
+    }
+
+    .card .info{
+        min-height: 67%;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    .card .info h1{
+        font-size: 1.4rem;
+    }
+
+    .card .info>p{
+        font-size: .8rem;
+    }
+
+    .card .stat{
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .card .stat-box >h3 {
+        font-size: 1.1rem;
+        margin-bottom: .3rem;
+    }
+    .card .stat-box>p {
+        font-size: .7rem;
+    }
+}
+/* making the design resonsive for the mobile */
