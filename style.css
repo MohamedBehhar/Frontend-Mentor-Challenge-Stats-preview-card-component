@@ -39,7 +39,7 @@
 .card .image{
     min-width: 50%;
     background: var(--Soft-violet);
-    background-image: url("/images/image-header-desktop.jpg");
+    background-image: url("images/image-header-desktop.jpg");
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
@@ -142,7 +142,7 @@
     }
     .card image {
         min-height: 33%;
-        background-image: url("/images/image-header-mobile.jpg");
+        background-image: url("images/image-header-mobile.jpg");
         background-position: top;
     }
 
@@ -172,4 +172,4 @@
         font-size: .7rem;
     }
 }
-/* making the design resonsive for the mobile */
+
